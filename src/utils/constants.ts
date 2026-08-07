@@ -30,7 +30,7 @@ export const LOADING_MESSAGES = [
  * WebLLM model id hosted by MLC.
  * Qwen2.5-1.5B balances Portuguese quality vs download size / VRAM.
  */
-export const MODEL_ID = "Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
+export const MODEL_ID = "Qwen2.5-1.5B-Instruct-q4f32_1-MLC";
 
 /** Interval for cycling LOADING_MESSAGES. */
 export const MESSAGE_ROTATION_MS = 2800;
