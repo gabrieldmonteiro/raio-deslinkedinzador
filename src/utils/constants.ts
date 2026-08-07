@@ -28,9 +28,9 @@ export const LOADING_MESSAGES = [
 
 /**
  * WebLLM model id hosted by MLC.
- * 0.5B q4f16 targets common notebooks (iGPU, 8–16 GB RAM) over quality.
+ * 0.5B q4f32 targets common notebooks (iGPU, 8–16 GB RAM) over quality.
  */
-export const MODEL_ID = "Qwen2.5-0.5B-Instruct-q4f16_1-MLC";
+export const MODEL_ID = "Qwen2.5-0.5B-Instruct-q4f32_1-MLC";
 
 /** KV-cache / context size passed to CreateMLCEngine (lower = less VRAM). */
 export const CONTEXT_WINDOW_SIZE = 1024;
