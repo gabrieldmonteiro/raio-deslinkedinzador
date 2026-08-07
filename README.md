@@ -81,19 +81,6 @@ Quick pointers:
 - `src/pages/HomePage.tsx` — home interaction flow
 - `src/App.tsx` — shell / navigation only
 
-## Deploy to GitHub Pages
-
-Configured for:
-
-`https://gabrieldmonteiro.github.io/raio-deslinkedinzador/`
-
-1. Create the GitHub repository `raio-deslinkedinzador`
-2. Push `main`
-3. In **Settings → Pages**, set source to **GitHub Actions**
-4. Workflow: `.github/workflows/deploy.yml`
-
-If the repository name differs, update `base` in `vite.config.ts`.
-
 ## Known limitations
 
 - Requires WebGPU-capable hardware/browser
