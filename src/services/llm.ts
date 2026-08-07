@@ -8,7 +8,7 @@ import type {
   InitProgressReport,
   MLCEngineInterface,
 } from "@mlc-ai/web-llm";
-import { MODEL_ID } from "../utils/constants";
+import { CONTEXT_WINDOW_SIZE, MODEL_ID } from "../utils/constants";
 import { buildMessages } from "../utils/prompts";
 import {
   cleanSummary,
@@ -87,14 +87,20 @@ class LlmService {
       // Dynamic import keeps the initial SPA bundle smaller.
       const { CreateMLCEngine } = await import("@mlc-ai/web-llm");
 
-      this.engine = await CreateMLCEngine(MODEL_ID, {
-        initProgressCallback: (report: InitProgressReport) => {
-          onProgress?.({
-            progress: report.progress,
-            text: report.text,
-          });
+      this.engine = await CreateMLCEngine(
+        MODEL_ID,
+        {
+          initProgressCallback: (report: InitProgressReport) => {
+            onProgress?.({
+              progress: report.progress,
+              text: report.text,
+            });
+          },
         },
-      });
+        {
+          context_window_size: CONTEXT_WINDOW_SIZE,
+        },
+      );
       this.state = "ready";
     } catch (error) {
       this.engine = null;
@@ -136,7 +142,7 @@ class LlmService {
         temperature: 0.2,
         top_p: 0.9,
         repetition_penalty: 1.1,
-        max_tokens: 400,
+        max_tokens: 256,
       });
 
       const cleaned = cleanSummary(
@@ -184,7 +190,7 @@ class LlmService {
         },
       ],
       temperature: 0.1,
-      max_tokens: 400,
+      max_tokens: 256,
     });
 
     const retryText = cleanSummary(
