@@ -41,7 +41,7 @@ Check `chrome://gpu` / `edge://gpu` and ensure **WebGPU** is hardware accelerate
 
 ## Model
 
-Default: `Qwen2.5-0.5B-Instruct-q4f16_1-MLC` (context 1024) — tuned for common notebooks with integrated GPUs.
+Default: `Qwen2.5-0.5B-Instruct-q4f32_1-MLC` (context 1024) — tuned for common notebooks with integrated GPUs.
 
 ## Install
 

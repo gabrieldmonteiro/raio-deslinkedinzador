@@ -84,7 +84,7 @@ main.tsx
 
 ### `src/utils/constants.ts` — `MODEL_ID`
 
-**What:** `Qwen2.5-0.5B-Instruct-q4f16_1-MLC` with `CONTEXT_WINDOW_SIZE = 1024`
+**What:** `Qwen2.5-0.5B-Instruct-q4f32_1-MLC` with `CONTEXT_WINDOW_SIZE = 1024`
 
 **Why:** Favors reach on common notebooks (iGPU, 8–16 GB RAM) over summarization quality. Changing the id requires a model that WebLLM publishes and that fits typical client GPUs.
 
