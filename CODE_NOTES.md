@@ -84,7 +84,7 @@ main.tsx
 
 ### `src/utils/constants.ts` — `MODEL_ID`
 
-**What:** `Qwen2.5-1.5B-Instruct-q4f16_1-MLC`
+**What:** `Qwen2.5-1.5B-Instruct-q4f32_1-MLC`
 
 **Why:** Better Portuguese summarization than tinier models; still feasible for browser VRAM. Changing the id requires a model that WebLLM publishes and that fits typical client GPUs.
 

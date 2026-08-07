@@ -41,7 +41,7 @@ Check `chrome://gpu` / `edge://gpu` and ensure **WebGPU** is hardware accelerate
 
 ## Model
 
-Default: `Qwen2.5-1.5B-Instruct-q4f16_1-MLC`
+Default: `Qwen2.5-1.5B-Instruct-q4f32_1-MLC`
 
 ## Install
 
