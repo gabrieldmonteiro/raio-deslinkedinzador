@@ -3,8 +3,8 @@
  * No React / WebLLM imports — easy to unit-test and reuse from llm.ts.
  */
 
-/** Soft cap so very long posts do not blow context / memory. */
-export const MAX_INPUT_CHARS = 7000;
+/** Soft cap so very long posts fit the reduced context window. */
+export const MAX_INPUT_CHARS = 2800;
 
 /** Truncate oversized input and mark the cut for the model. */
 export function truncateInput(text: string, maxChars = MAX_INPUT_CHARS): string {

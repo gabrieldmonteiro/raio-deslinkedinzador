@@ -28,9 +28,12 @@ export const LOADING_MESSAGES = [
 
 /**
  * WebLLM model id hosted by MLC.
- * Qwen2.5-1.5B balances Portuguese quality vs download size / VRAM.
+ * 0.5B q4f16 targets common notebooks (iGPU, 8–16 GB RAM) over quality.
  */
-export const MODEL_ID = "Qwen2.5-1.5B-Instruct-q4f32_1-MLC";
+export const MODEL_ID = "Qwen2.5-0.5B-Instruct-q4f16_1-MLC";
+
+/** KV-cache / context size passed to CreateMLCEngine (lower = less VRAM). */
+export const CONTEXT_WINDOW_SIZE = 1024;
 
 /** Interval for cycling LOADING_MESSAGES. */
 export const MESSAGE_ROTATION_MS = 2800;
