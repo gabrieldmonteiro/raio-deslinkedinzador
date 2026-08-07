@@ -2,6 +2,9 @@
 
 ⚡ Transforme textões do LinkedIn em textos que um ser humano realmente leria.
 
+<img width="1920" height="1428" alt="screencapture-gabrieldmonteiro-github-io-raio-deslinkedinzador-2026-08-07-06_07_56" src="https://github.com/user-attachments/assets/b8965916-be7f-437b-83e9-a366238714a7" />
+
+
 Single-page application that summarizes overly long LinkedIn posts using an LLM **directly in the browser** via [WebLLM](https://webllm.mlc.ai/). No backend, no API keys, and no sending user text to application servers.
 
 ## What it is
